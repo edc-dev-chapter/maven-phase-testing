@@ -1,0 +1,33 @@
+name: Pipeline
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  ci:
+    name: Continous Integration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Dependencies
+        run: mvn dependency:go-offline
+      - name: Compilation
+        run: mvn test-compile
+      - name: Unit Testing
+        run: mvn surefire:test
+      - name: Packaging
+        run: mvn package -DskipUTs
+      - name: Integration Testing
+        run: mvn failsafe:integration-test
