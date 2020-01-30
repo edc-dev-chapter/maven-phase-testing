@@ -168,7 +168,7 @@ $ mvn failsafe:integration-test
 
 # GitHub Actions workflow example
 An example application in the [GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions) workflow as CI (continuous integration) pipeline.
-The workflow runs page and [pipeline.yml](.github/workflows/pipeline.yml).
+The [workflow runs page](https://github.com/edc-dev-chapter/maven-phase-testing/actions) and [pipeline.yml](.github/workflows/pipeline.yml).
 
 # References
 * https://semaphoreci.com/community/tutorials/how-to-split-junit-tests-in-a-continuous-integration-environment
