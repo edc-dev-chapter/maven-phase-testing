@@ -28,6 +28,6 @@ jobs:
       - name: Unit Testing
         run: mvn surefire:test
       - name: Packaging
-        run: mvn package -DskipUTs
+        run: mvn jar:jar
       - name: Integration Testing
         run: mvn failsafe:integration-test
