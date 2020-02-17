@@ -6,7 +6,7 @@
     <artifactId>maven-phase-testing</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <url>https://github.build.ge.com/edc-development-chapter/maven-phase-testing</url>
+    <url>https://github.com/edc-dev-chapter/maven-phase-testing</url>
 
     <organization>
         <name>Engineering Design Center</name>
@@ -22,7 +22,7 @@
     </developers>
 
     <scm>
-        <connection>scm:git:ssh://github.build.ge.com/edc-development-chapter/maven-phase-testing.git</connection>
+        <connection>scm:git:ssh://github.com/edc-dev-chapter/maven-phase-testing.git</connection>
     </scm>
 
     <issueManagement>
