@@ -78,7 +78,7 @@ Set through [`Java system properties`](https://docs.oracle.com/en/java/javase/11
 
 #### Skips unit tests
 ```bash
-$ mvn -DskipIUs ..
+$ mvn -DskipUTs ..
 ```
 
 #### Skips integration tests
